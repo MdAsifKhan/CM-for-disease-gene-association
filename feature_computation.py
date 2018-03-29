@@ -66,9 +66,6 @@ def parallel_disease(disease_row, disease, fold, coexp_matrix, go_genes_normaliz
 	df = pd.DataFrame(features)
 	df.to_csv(feat_directory + '/' + disease + '.txt', sep='\t', header=None)
 
-def sigmoid(x):
-	return 1.0/(1.0+np.exp(-x))
-
 DATA_ROOT = '../CM-for-disease-gene-association/data/'
 
 with h5py.File(DATA_ROOT + 'random_walk_score.h5' ,'r') as hf:
